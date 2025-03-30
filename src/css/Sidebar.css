@@ -1,0 +1,194 @@
+.sidebar {
+    background-color: white;
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.1);
+    border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  /* .sidebar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .sidebar-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .sidebar-link {
+    color: black;
+    font-size: 1rem;
+    padding: 0.1rem 0.1rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+  
+  .sidebar-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      padding: 1rem;
+    }
+  
+    .sidebar-brand {
+      font-size: 1.2rem;
+    }
+  
+    .sidebar-links {
+      gap: 1rem;
+    }
+  
+    .sidebar-link {
+      padding: 0.5rem;
+    }
+  }
+
+  .sidebar-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 1.5%;
+    top: 95px; 
+    height: calc(100vh - 60px); 
+    width: 100px;
+    background: white;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  @media (max-width: 1024px) {
+    .sidebar-links {
+      width: 200px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar-links {
+      width: 100%;
+      height: auto;
+      position: relative;
+      display: none;
+    }
+  
+    .sidebar-links.show {
+      display: flex;
+    }
+  
+    .menu-button {
+      display: block;
+      background: #282c34;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+  }
+  
+.sidebar-icon{
+    width: 20%;
+} */
+
+
+/* Sidebar Container */
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 82px; /* Adjust this based on navbar height */
+    height: calc(100vh - 60px); /* Subtract navbar height */
+    width: 250px;
+    background: white;
+    padding-top: 20px;
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto; /* Allows scrolling if content exceeds height */
+    border-right: 1.5px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Sidebar Links */
+  .sidebar-link {
+    color: black;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center; /* Align text & icon */
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+  
+  .sidebar-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Sidebar Icons */
+  .sidebar-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+  /* RESPONSIVE DESIGN */
+  
+  /* For Tablets: Adjust Width */
+  @media (max-width: 1024px) {
+    .sidebar-links {
+      width: 200px;
+    }
+  }
+  
+  /* For Mobile: Sidebar is Hidden Initially */
+  @media (max-width: 768px) {
+    .sidebar-links {
+      width: 100%;
+      height: auto;
+      position: fixed;
+      top: 60px;
+      left: -100%; /* Hide sidebar by default */
+      background: white;
+      padding: 15px 0;
+      transition: left 0.3s ease-in-out;
+    }
+  
+    /* Show Sidebar when toggled */
+    .sidebar-links.show {
+      left: 0;
+    }
+  
+    /* Sidebar Links Full Width */
+    .sidebar-link {
+      font-size: 16px;
+      padding: 10px 15px;
+      justify-content: center;
+    }
+  }
+  
+  /* Menu Button for Mobile */
+  .menu-button {
+    display: none;
+    background: white;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  /* Show menu button only on mobile */
+  @media (max-width: 768px) {
+    .menu-button {
+      display: block;
+    }
+  }
+  

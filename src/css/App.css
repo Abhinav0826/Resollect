@@ -1,0 +1,22 @@
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;  /* Takes remaining space */
+  padding: 20px;
+}
+
+.container {
+  display: flex;  /* Makes sidebar and content appear side by side */
+  align-items: flex-start; /* Aligns items to the top */
+}
+
+.sidebar {
+  width: 16%;  /* Adjust width as needed */
+  min-height: 100vh;  /* Full height */
+  background-color: #f4f4f4; /* Light background */
+  padding: 20px;
+}

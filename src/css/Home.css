@@ -1,0 +1,287 @@
+
+.home {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+
+@media (max-width: 1024px) {
+  .home {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    margin-left: 0; 
+    padding: 15px;
+  }
+}
+
+
+/* .home {
+  padding: 2rem 0;
+  width: 100%;
+  box-sizing: border-box;
+} */
+
+.search-form {
+  max-width: 600px;
+  max-height: 5vh;
+  margin: 0 0 2rem 0; /* Removed auto centering */
+  display: flex;
+  gap: 1rem;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+  justify-content: flex-start; /* Align items to the left */
+}
+
+/* Search Input */
+.search-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+  border: 2px solid #e9e9e9;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-form {
+    max-width: 100%; /* Full width on smaller screens */
+    flex-direction: column; /* Stack input field */
+  }
+
+  .search-input {
+    width: 100%; /* Full width on mobile */
+  }
+}
+
+
+.search-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #e50914;
+  color: white;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.search-button:hover {
+  background-color: #f40612;
+}
+
+
+@media (max-width: 639px) {
+  .home {
+    padding: 1rem 0;
+  }
+
+  .search-form {
+    margin-bottom: 1rem;
+  }
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.heading {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  margin-top: -1%;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 24px;
+    text-align: left;
+  }
+}
+
+/* Category Filters */
+.category-filters {
+  display: flex;
+  justify-content: left; /* Align left */
+  align-items: center;
+  flex-wrap: wrap; /* Wrap to next line if needed */
+  gap: 10px; /* Space between buttons */
+  margin: 20px 0;
+}
+
+.filter-button {
+  background: white;
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.filter-button:hover {
+  background: #0056b3;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .category-filters {
+    justify-content: flex-start; /* Align left for small screens */
+    overflow-x: auto; /* Make filters scrollable if needed */
+  }
+
+  .filter-button {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
+
+/* Search Bar and Dropdowns */
+.search-container {
+  display: flex;
+  justify-content: space-between; /* Search bar on left, dropdowns on right */
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Dropdowns container */
+.dropdown-container {
+  display: flex;
+  gap: 10px;
+}
+
+/* Dropdown Styles */
+.search-dropdown {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 2px solid #e9e9e9;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .search-container {
+    flex-direction: column; /* Stack elements on smaller screens */
+    align-items: flex-start; /* Align left */
+  }
+
+  .dropdown-container {
+    width: 100%; /* Full width */
+    justify-content: flex-start;
+  }
+
+  .search-dropdown {
+    width: 100%; /* Make dropdowns full width on smaller screens */
+  }
+}
+
+/* "0 Loans Selected" - Outside the Form */
+.loan-status-container {
+  width: 100%;
+  text-align: left;
+  margin-top: 5px;
+  padding: 1%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: white;
+}
+
+/* Loan Status Text */
+.loan-status {
+  font-size: 1rem;
+  color: black;
+}
+
+/* Responsive Loan Status */
+@media (max-width: 768px) {
+  .loan-status-container {
+    text-align: center;
+    padding: 2%;
+    font-size: 0.9rem;
+  }
+
+  .loan-status {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Loan Table */
+.loan-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border: 2px solid black; /* Outer table border */
+  border-radius: 8px;
+  overflow: hidden;
+  color: black; /* Ensures text inside table is black */
+}
+
+/* Column Headers */
+.loan-table th {
+  padding: 12px;
+  text-align: left;
+  background-color: white; /* Light gray background for visibility */
+  border-top: 2px solid rgba(0, 0, 0, 0.1);;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);;
+  color: black; /* Header text is black */
+}
+
+/* Table Rows */
+.loan-table td {
+  padding: 12px;
+  text-align: left;
+  color: black; /* Ensures table data text is black */
+}
+
+/* Row Separators */
+.loan-table tr:not(:last-child) td {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);;
+}
+
+/* Outer Edge Borders */
+.loan-table tr:first-child th {
+  border-top: 2px solid black;
+}
+.loan-table tr:last-child td {
+  border-bottom: 2px solid black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .loan-table-container {
+    overflow-x: auto;
+  }
+
+  .loan-table th,
+  .loan-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .loan-status-container {
+    text-align: left;
+  }
+}
